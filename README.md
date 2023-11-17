@@ -26,13 +26,34 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Explain the differences between `.map`, `.reduce` and `.filter` and describe a use case for each. 
 
+    `.map` performs an operation on each element in an array, populates a new array with the return value of the opperation ran on each element and then returns the new array.
+    A use case example would be when we need a new array of values derived from the values of another array but want to maintain the integrtiy of the original
+
+    `.reduce` performs an operation on each element in order, after the operation is performed on an element the return value is stored and then used in the next operation and then the final stored value is returned.
+    A use case example would be when you need the sum of all numbers in an array.
+
+    `.filter` preforms a test on each element in an array and creates a new array with only the elements that passed the test. An obvious difference from `.map` would be that the size of the array is only going to be as long as the number of elements that passed test but a not so obvious difference is that the properties of the new array are pass-by-reference, meaning they reference the same objects in memory and if the value of those objects are changed they will change in both arrays.
+    A use case example would be when you need elements from an array that fit a specific criteria
+
 2. Explain the difference between a callback and a higher order function.
+
+    A "callback function" is a fucntion that is passed to another function as a parameter.
+    A "higher order function" is a function that accepts a function as a parameter.
 
 3. Explain what a closure is.
 
+    In JS, a closure is the protected inner part of a function that prevents referencing of the items inside of that function by items outside of the function, without referencing the function first.
+
 4. Describe the four principles of the 'this' keyword.
 
+    1. Window/Global Object Binding: The default global scope binding
+    2. Implicit Binding: When 'this' refers to the object calling it
+    3. New Binding: When 'this' refers to a newly created instance of an object using the 'new' keyword
+    4. Explicit Binding: When we explicitly bind 'this' to an object using a method ex .call()
+
 5. Why do we need super() in an extended class?
+
+    It calls the parent's constructor function and adds it's contents to the child
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 
